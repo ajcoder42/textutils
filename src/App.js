@@ -39,7 +39,7 @@ function App() {
     <>
       <BrowserRouter>
         <Navbar
-          title="textutils"
+          title="TextUtils"
           mode={mode}
           toggleMode={toggleMode}
           theme={theme}
@@ -49,13 +49,13 @@ function App() {
 
         <div className="container my-3">
           <Routes>
-            <Route exact path="/about" element={<About />} />
+            <Route exact path="/about" element={<About mode={mode} />} />
             <Route
               exact
               path="/"
               element={
                 <Textform
-                  heading="Enter The Text To Analyze"
+                  heading="Try Textutils - Word counter, Character counter, Lowercase to Uppercase converter, Uppercase to Lowercase converter, Extra spaces Remover"
                   mode={mode}
                   showAlert={showAlert}
                 />
