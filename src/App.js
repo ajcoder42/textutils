@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "./App.css";
 import Alert from "./components/Alert";
-import About from "./components/About";
+// import About from "./components/About";
 import Navbar from "./components/Navbar";
 import Textform from "./components/Textform";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+// import { BrowserRouter, Route, Routes } from "react-router-dom";
 function App() {
   //whether dark mode is enabled or not
   const [mode, setMode] = useState("light");
@@ -37,33 +37,33 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
-        <Navbar
-          title="TextUtils"
-          mode={mode}
-          toggleMode={toggleMode}
-          theme={theme}
-          changeTheme={changeTheme}
-        />
-        <Alert alert={alert} />
+      {/* <BrowserRouter> */}
+      <Navbar
+        title="TextUtils"
+        mode={mode}
+        toggleMode={toggleMode}
+        theme={theme}
+        changeTheme={changeTheme}
+      />
+      <Alert alert={alert} />
 
-        <div className="container my-3">
-          <Routes>
-            <Route exact path="/about" element={<About mode={mode} />} />
-            <Route
+      <div className="container my-3">
+        {/* <Routes> */}
+        {/* <Route exact path="/about" element={<About mode={mode} />} /> */}
+        {/* <Route
               exact
               path="/"
-              element={
-                <Textform
-                  heading="Try Textutils - Word counter, Character counter, Lowercase to Uppercase converter, Uppercase to Lowercase converter, Extra spaces Remover"
-                  mode={mode}
-                  showAlert={showAlert}
-                />
-              }
-            />
-          </Routes>
-        </div>
-      </BrowserRouter>
+              element={ */}
+        <Textform
+          heading="Try Textutils - Word counter, Character counter, Lowercase to Uppercase converter, Uppercase to Lowercase converter, Extra spaces Remover"
+          mode={mode}
+          showAlert={showAlert}
+        />
+        {/* } */}
+        {/* /> */}
+        {/* </Routes> */}
+      </div>
+      {/* </BrowserRouter> */}
     </>
   );
 }
